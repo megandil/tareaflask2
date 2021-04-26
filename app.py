@@ -27,4 +27,5 @@ def detalle(num1):
         abort(404)
     return render_template("libro.html",tit=tit,img=img,autores=autores,descripcion=descripcion,categorias=categorias,status=status)
 
-app.run(debug=True)
+port=os.environ["PORT"]
+app.run('0.0.0.0',int(port), debug=True)
