@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+</head>
+<body>
+	<h1>Libro</h1>
+    <h2>Titulo</h2>
+    <p>{{ tit }}</p>
+    <img src="{{ img }}" alt="">
+    <h2>Autores</h2>
+    <ul>
+        {% for i in autores -%}
+    <li>{{ i }}</li>
+        {% endfor-%}
+    </ul>
+    <h2>Categorias</h2>
+    <ul>
+        {% for i in categorias -%}
+    <li>{{ i }}</li>
+        {% endfor-%}
+    </ul>
+    {% if status == "MEAP" %}
+        <h2>Estado</h2>
+        <p>NO SE HA PUBLICADO</p>
+    {% endif %}
+    <h2>Descripción</h2>
+    <p>{{ descripcion }}</p>
+</body>
+</html>
