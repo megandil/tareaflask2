@@ -5,9 +5,9 @@
     <title>Biblioteca</title>
 </head>
 <body>
-	<h1>Bilbioteca de Daniel</h1>
+	<h1>Bilbioteca de Daniel Miguel Mesa Mejías</h1>
     <ul>
-        {% for i in libro -%}
+        {% for i in libros -%}
     <li><a href="/libro/{{ i.get("isbn") }}">{{ i.get("titulo") }}</a></li>
         {% endfor-%}
     </ul>
