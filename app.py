@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def inicio():
     libros=[]
-    for i in datos:
+    for i in dato:
         dic={"titulo":i.get("title"),"isbn":i.get("isbn")}
         libros.append(dic)
     return render_template("inicio.html",libros=libros)
