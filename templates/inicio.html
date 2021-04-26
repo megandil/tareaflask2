@@ -8,7 +8,7 @@
 	<h1>Bilbioteca de Daniel</h1>
     <ul>
         {% for i in libros -%}
-    <li><a href="/libro/{{ i.get("isbn") }}">{{ i.get("titulo") }}</a></li>
+    <li><a href="/libro/{{ i.get("isb") }}">{{ i.get("titulo") }}</a></li>
         {% endfor-%}
     </ul>
 </body>
