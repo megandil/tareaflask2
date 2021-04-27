@@ -23,10 +23,11 @@ def detalle(num1):
             descripcion=i.get("longDescription")
             categorias=i.get("categories")
             status=i.get("status")
+            numpag=i.get("pageCount")
             ind=1
     if ind == 0:
         abort(404)
-    return render_template("libro.html",tit=tit,img=img,autores=autores,descripcion=descripcion,categorias=categorias,status=status)
+    return render_template("libro.html",tit=tit,img=img,autores=autores,descripcion=descripcion,categorias=categorias,status=status,numpag=numpag)
 
 port=os.environ["PORT"]
 app.run('0.0.0.0',int(port), debug=True)
