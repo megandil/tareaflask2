@@ -29,5 +29,16 @@ def detalle(num1):
         abort(404)
     return render_template("libro.html",tit=tit,img=img,autores=autores,descripcion=descripcion,categorias=categorias,status=status,numpag=numpag)
 
+@app.route('/categoria/<cat>')
+def categoria(cat):
+    libros=[]
+    for i in datos:
+        for c in i.get("categories"):
+            if c == cat:
+                dic={"titulo":i.get("title"),"isbn":i.get("isbn")}
+                libros.append(dic)
+    return render_template("librocategoria.html",libros=libros,cat=cat)
+
+
 port=os.environ["PORT"]
 app.run('0.0.0.0',int(port), debug=True)
