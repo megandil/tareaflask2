@@ -20,7 +20,7 @@
     <h2>Categorias</h2>
     <ul>
         {% for i in categorias -%}
-    <li>{{ i }}</li>
+    <li><a href="/categoria/{{ i }}">{{ i }}</a></li>
         {% endfor-%}
     </ul>
     {% if status == "MEAP" %}
