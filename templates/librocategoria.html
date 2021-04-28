@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+</head>
+<body>
+	<h1>LIBROS DE CATEGORÍA: {{ cat }}</h1>
+    <ul>
+        {% for i in libros -%}
+    <li><a href="/libro/{{ i.get("isbn") }}">{{ i.get("titulo") }}</a></li>
+        {% endfor-%}
+    </ul>
+</body>
+</html>
